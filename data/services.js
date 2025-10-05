@@ -1,0 +1,68 @@
+import { Globe, ShoppingCart, Code2, TrendingUp } from 'lucide-react';
+
+export const services = [
+  {
+    id: 'vitrine',
+    icon: Globe,
+    title: 'Sites Vitrines Premium',
+    description: 'Sites web modernes et performants pour valoriser votre activité en ligne.',
+    features: [
+      'Design responsive et moderne',
+      'Optimisation SEO avancée',
+      'Performance optimale (score 95+)',
+      'Accessibilité WCAG 2.1',
+      'Hébergement et maintenance',
+    ],
+    technologies: ['Next.js', 'React', 'Tailwind CSS'],
+    price: 'À partir de 1 500€',
+    delay: 0,
+  },
+  {
+    id: 'ecommerce',
+    icon: ShoppingCart,
+    title: 'E-commerce Sur Mesure',
+    description: 'Boutiques en ligne complètes avec gestion des paiements et du stock.',
+    features: [
+      'Paiement sécurisé (Stripe/PayPal)',
+      'Gestion catalogue et stock',
+      'Tableau de bord admin',
+      'Analytics et rapports',
+      'Intégration CRM',
+    ],
+    technologies: ['Next.js', 'Node.js', 'PostgreSQL'],
+    price: 'À partir de 3 500€',
+    delay: 0.1,
+  },
+  {
+    id: 'webapp',
+    icon: Code2,
+    title: 'Applications Web Métier',
+    description: 'Solutions web sur mesure pour automatiser vos processus métier.',
+    features: [
+      'Architecture microservices',
+      'API REST/GraphQL',
+      'Base de données optimisée',
+      'Authentification sécurisée',
+      'Scalabilité garantie',
+    ],
+    technologies: ['React', 'Node.js', 'TypeScript'],
+    price: 'Sur devis',
+    delay: 0.2,
+  },
+  {
+    id: 'seo',
+    icon: TrendingUp,
+    title: 'SEO & Performance',
+    description: 'Audit et optimisation pour améliorer votre visibilité et vos performances.',
+    features: [
+      'Audit technique complet',
+      'Optimisation Core Web Vitals',
+      'Stratégie de contenu SEO',
+      'Suivi et analytics',
+      'Rapports mensuels',
+    ],
+    technologies: ['Google Analytics', 'Search Console', 'Lighthouse'],
+    price: 'À partir de 800€',
+    delay: 0.3,
+  },
+];

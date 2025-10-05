@@ -1,62 +1,47 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './data/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-        heading: ['var(--font-space-grotesk)', 'var(--font-inter)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-fira-code)', 'Consolas', 'Monaco', 'Courier New', 'monospace'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        mono: ['Fira Code', 'Consolas', 'Monaco', 'Courier New', 'monospace'],
       },
       colors: {
-        background: '#0A192F',
-        surface: '#10253E',
-        foreground: '#F5F7FA',
-        muted: '#A0AEC0',
-        accent: '#0D99FF',
-        accentSecondary: '#10B981',
-        accentTertiary: '#9333EA',
-        error: '#E53E3E',
-        // Compatibilité avec les variables CSS existantes
-        'accent-secondary': 'var(--color-accent-secondary, #10B981)',
-        'accent-matrix': 'var(--color-accent-matrix, #00FFBC)',
-        border: 'var(--color-border)',
+        primary: '#00ff41',
+        secondary: '#00d936',
+        accent: '#39ff14',
+        background: '#000000',
       },
-      fontSize: {
-        'hero': 'clamp(2.5rem, 5vw, 4rem)', // 40-64px
-        'display': 'clamp(2rem, 4.5vw, 3rem)', // 32-48px
-        'heading-xl': 'clamp(1.75rem, 4vw, 2.5rem)', // 28-40px
-        'heading-lg': 'clamp(1.5rem, 3vw, 2rem)', // 24-32px
-        'heading-md': 'clamp(1.25rem, 2.5vw, 1.5rem)', // 20-24px
-        'heading-sm': 'clamp(1.125rem, 2vw, 1.25rem)', // 18-20px
-        'body-lg': 'clamp(1.125rem, 2vw, 1.25rem)', // 18-20px
-        'body': 'clamp(1rem, 2vw, 1.125rem)', // 16-18px
-        'body-sm': 'clamp(0.875rem, 1.5vw, 1rem)', // 14-16px
-        'caption': 'clamp(0.75rem, 1.5vw, 0.875rem)', // 12-14px
-        'ui': 'clamp(0.875rem, 2vw, 1rem)', // 14-16px
-        'ui-sm': 'clamp(0.75rem, 1.5vw, 0.875rem)', // 12-14px
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-in-left': 'slideInLeft 0.6s ease-out',
+        'slide-in-right': 'slideInRight 0.6s ease-out',
+        'pulse-slow': 'pulse 3s ease-in-out infinite',
       },
-      spacing: {
-        'section': '100px',
-        'gutter': '24px',
-        '4': '0.25rem',
-        '8': '0.5rem',
-        '12': '0.75rem',
-        '16': '1rem',
-        '24': '1.5rem',
-        '32': '2rem',
-        '48': '3rem',
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-50px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(50px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
       },
-      borderRadius: {
-        'md': '6px',
-        'lg': '12px',
-        'xl': '1.5rem',
-        '2xl': '2rem',
-      },
-      boxShadow: {
-        'card': '0 4px 12px rgba(0, 0, 0, 0.1)',
-        'elevation': '0 4px 20px rgba(0, 0, 0, 0.25)',
-        'card-hover': '0 8px 32px rgba(0, 0, 0, 0.12)',
+      backdropBlur: {
+        xs: '2px',
       },
     },
   },
+  plugins: [],
 };
