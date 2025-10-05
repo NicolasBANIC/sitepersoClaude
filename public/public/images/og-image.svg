@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" fill="none">
+    <defs>
+        <linearGradient id="a" x1="0%" x2="100%" y1="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1"/>
+        </linearGradient>
+        <filter id="c">
+            <feGaussianBlur result="coloredBlur" stdDeviation="4"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <path fill="url(#a)" d="M0 0h1200v630H0z"/>
+    <circle cx="100" cy="100" r="60" fill="#fff" opacity=".1"/>
+    <circle cx="1100" cy="530" r="80" fill="#fff" opacity=".1"/>
+    <circle cx="950" cy="100" r="40" fill="#fff" opacity=".15"/>
+    <pattern id="b" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path stroke="#fff" stroke-width=".5" d="M40 0H0v40" opacity=".1"/>
+    </pattern>
+    <path fill="url(#b)" d="M0 0h1200v630H0z"/>
+    <rect width="1000" height="330" x="100" y="150" fill="#fff" filter="url(#c)" opacity=".1" rx="20"/>
+    <text x="150" y="250" fill="#fff" font-family="monospace" font-size="120" font-weight="bold" opacity=".3">&lt;/&gt;</text>
+    <text x="600" y="280" fill="#fff" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" text-anchor="middle">
+    Nicolas Banic
+  </text>
+    <text x="600" y="350" fill="#fff" font-family="system-ui, -apple-system, sans-serif" font-size="42" opacity=".95" text-anchor="middle">
+    Développeur Web Freelance
+  </text>
+    <text x="600" y="410" fill="#fff" font-family="system-ui, -apple-system, sans-serif" font-size="28" opacity=".85" text-anchor="middle">
+    Sites vitrines • E-commerce • Applications web
+  </text>
+    <rect width="240" height="50" x="480" y="460" fill="#fff" opacity=".2" rx="25"/>
+    <text x="600" y="493" fill="#fff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle">
+    nicolasbanic.dev
+  </text>
+</svg>
